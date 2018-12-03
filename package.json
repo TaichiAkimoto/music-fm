@@ -10,7 +10,8 @@
     "tsc-test": "tsc --project . --noEmit",
     "jest": "jest",
     "precommit": "lint-staged",
-    "postinstall": "rndebugger-open"
+    "postinstall": "rndebugger-open",
+    "publish_dev": "exp login -u \"$EXPO_ACCOUNT\" -p \"$EXPO_PASSWORD\" && exp publish --release-channel music-fm_v1.0.0"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

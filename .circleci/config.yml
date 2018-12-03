@@ -25,4 +25,4 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn test
+      - run: yarn run publish_dev
