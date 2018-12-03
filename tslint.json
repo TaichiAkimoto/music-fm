@@ -1,9 +1,17 @@
 {
+  "rulesDirectory": ["tslint-plugin-prettier"],
   "extends": [
     "tslint:recommended",
-    "tslint-config-airbnb"
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
   ],
   "rules": {
+    "prettier": [
+      true, {
+        "singleQuote": true,
+        "semi": false
+      }
+    ],
     "no-any": true,
     "prefer-array-literal": [true, { "allow-type-parameters": true }],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"]

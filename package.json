@@ -8,7 +8,14 @@
     "test": "yarn run tslint && yarn run tsc-test && yarn run jest",
     "tslint": "tslint --project .",
     "tsc-test": "tsc --project . --noEmit",
-    "jest": "jest"
+    "jest": "jest",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "jest-expo",
@@ -35,16 +42,21 @@
   },
   "dependencies": {
     "expo": "^31.0.2",
+    "prettier": "^1.15.3",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1"
   },
   "devDependencies": {
     "@types/expo": "^31.0.1",
     "@types/jest": "^23.3.10",
     "@types/react": "^16.7.11",
     "@types/react-test-renderer": "^16.0.3",
+    "husky": "^1.2.0",
     "jest": "^23.6.0",
     "jest-expo": "^31.0.0",
+    "lint-staged": "^8.1.0",
     "react-test-renderer": "^16.6.3",
     "ts-jest": "^23.10.5",
     "tslint": "^5.11.0",
