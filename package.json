@@ -11,7 +11,7 @@
     "jest": "jest",
     "precommit": "lint-staged",
     "postinstall": "rndebugger-open",
-    "publish_dev": "yarn global add expo-cli && expo login -u \"$EXPO_ACCOUNT\" -p \"$EXPO_PASSWORD\" && expo publish --release-channel music-fm_v1.0.0"
+    "publish_dev": "yarn global add expo-cli && expo login -u ${EXPO_ACCOUNT} -p ${EXPO_PASSWORD} && expo publish --release-channel music-fm_v1.0.0"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
