@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fm.music"
+    },
+    "android": {
+      "package": "com.fm.music"
+    },
   }
 }
