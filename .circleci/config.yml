@@ -25,4 +25,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+      - run:
+          name: Expo
+          command: yarn global add expo-cli
       - run: yarn run publish_dev
